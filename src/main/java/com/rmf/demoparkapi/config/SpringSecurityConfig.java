@@ -1,5 +1,6 @@
 package com.rmf.demoparkapi.config;
 
+import com.rmf.demoparkapi.jwt.JwtAuthenticationEntryPoint;
 import com.rmf.demoparkapi.jwt.JwtAuthorizationFilter;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
@@ -44,6 +45,7 @@ public class SpringSecurityConfig {
                         jwtAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class
                 )
                 .headers(headers -> headers.disable())
+                .exceptionHandling(ex -> ex.authenticationEntryPoint(new JwtAuthenticationEntryPoint()))
                 .build();
     }
 
