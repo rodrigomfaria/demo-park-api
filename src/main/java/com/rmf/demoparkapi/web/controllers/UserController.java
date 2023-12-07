@@ -32,7 +32,8 @@ public class UserController {
     private final UserService userService;
 
     @Operation(summary = "Create a new user",
-            description = "feature to create a new user",
+            description = "Resource to create a new costumer linked to an already registered user. " +
+                    "Request requires a bearer token",
             responses = {
                     @ApiResponse(
                             responseCode = "201",
@@ -106,5 +107,4 @@ public class UserController {
         List<User> users = userService.getAll();
         return ResponseEntity.ok(UserMapper.toListDto(users));
     }
-
 }
