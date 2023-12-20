@@ -27,26 +27,26 @@ public class Vacancy implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "codigo", nullable = false, unique = true, length = 4)
-    private String codigo;
+    @Column(name = "cod", nullable = false, unique = true, length = 4)
+    private String cod;
     @Column(name = "status", nullable = false)
     @Enumerated(EnumType.STRING)
-    private StatusVaga status;
+    private StatusVacancy status;
     @CreatedDate
-    @Column(name = "data_criacao")
-    private LocalDateTime dataCriacao;
+    @Column(name = "dh_created")
+    private LocalDateTime dh_created;
     @LastModifiedDate
-    @Column(name = "data_modificacao")
-    private LocalDateTime dataModificacao;
+    @Column(name = "dh_updated")
+    private LocalDateTime dh_updated;
     @CreatedBy
-    @Column(name = "criado_por")
-    private String criadoPor;
+    @Column(name = "created_by")
+    private String createdBy;
     @LastModifiedBy
-    @Column(name = "modificado_por")
-    private String modificadoPor;
+    @Column(name = "updated_by")
+    private String updatedBy;
 
-    public enum StatusVaga {
-        LIVRE, OCUPADA
+    public enum StatusVacancy {
+        FREE, BUSY
     }
 
     @Override
