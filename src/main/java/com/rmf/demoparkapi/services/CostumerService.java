@@ -46,4 +46,11 @@ public class CostumerService {
     public Costumer getByUserId(Long id) {
         return costumerRepository.findByUserId(id);
     }
+
+    @Transactional(readOnly = true)
+    public Costumer getByIdentificationNumber(String identificationNumber) {
+        return costumerRepository.findByIdentificationNumber(identificationNumber).orElseThrow(
+                () -> new EntityNotFoundException(String.format("Costumer with identification number '%s' not found", identificationNumber))
+        );
+    }
 }
