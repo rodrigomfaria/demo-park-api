@@ -15,7 +15,7 @@ import lombok.Setter;
 public class VacancyCreateDto {
     @NotBlank
     @Size(min = 4, max = 4)
-    private String cod;
+    private String code;
     @NotBlank
     @Pattern(regexp = "FREE|BUZY")
     private String status;

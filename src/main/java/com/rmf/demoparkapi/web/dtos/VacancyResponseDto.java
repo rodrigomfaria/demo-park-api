@@ -11,6 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class VacancyResponseDto {
     private Long id;
-    private String cod;
+    private String code;
     private String status;
 }
