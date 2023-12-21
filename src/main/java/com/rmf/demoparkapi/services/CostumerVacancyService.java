@@ -23,7 +23,7 @@ public class CostumerVacancyService {
 
     @Transactional(readOnly = true)
     public CostumerVacancy getByReceipt(String receipt) {
-        return costumerVacancyRepository.findByReceiptAndDhExitIsNull(receipt).orElseThrow(
+        return costumerVacancyRepository.findByReceiptNumberAndDhExitIsNull(receipt).orElseThrow(
                 () -> new EntityNotFoundException(
                         String.format("Recibo '%s' não encontrado no sistema ou check-out já realizado", receipt)
                 )

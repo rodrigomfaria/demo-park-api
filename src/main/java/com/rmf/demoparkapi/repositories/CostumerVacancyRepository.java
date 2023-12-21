@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public interface CostumerVacancyRepository extends JpaRepository<CostumerVacancy, Long> {
 
-    Optional<CostumerVacancy> findByReceiptAndDhExitIsNull(String receipt);
+    Optional<CostumerVacancy> findByReceiptNumberAndDhExitIsNull(String receipt);
 
     long countByCostumerIdentificationNumberAndDhExitIsNotNull(String identificationNumber);
 
