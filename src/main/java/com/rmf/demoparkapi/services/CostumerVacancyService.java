@@ -25,7 +25,7 @@ public class CostumerVacancyService {
     public CostumerVacancy getByReceipt(String receipt) {
         return costumerVacancyRepository.findByReceiptNumberAndDhExitIsNull(receipt).orElseThrow(
                 () -> new EntityNotFoundException(
-                        String.format("Recibo '%s' não encontrado no sistema ou check-out já realizado", receipt)
+                        String.format("Receipt '%s' not found in the system or checkout already performed", receipt)
                 )
         );
     }
