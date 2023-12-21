@@ -27,8 +27,8 @@ public class Vacancy implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "cod", nullable = false, unique = true, length = 4)
-    private String cod;
+    @Column(name = "code", nullable = false, unique = true, length = 4)
+    private String code;
     @Column(name = "status", nullable = false)
     @Enumerated(EnumType.STRING)
     private StatusVacancy status;

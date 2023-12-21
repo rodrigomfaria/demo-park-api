@@ -1,5 +1,6 @@
 package com.rmf.demoparkapi.web.exceptions;
 
+import com.rmf.demoparkapi.exceptions.CodUniqueViolationException;
 import com.rmf.demoparkapi.exceptions.EntityNotFoundException;
 import com.rmf.demoparkapi.exceptions.NumberIdentificationUniqueException;
 import com.rmf.demoparkapi.exceptions.UsernameUniqueViolationException;
@@ -29,7 +30,7 @@ public class ApiExceptionHandler {
                 .body(new ErrorMessage(request, HttpStatus.UNPROCESSABLE_ENTITY, "Invalid field!!!", result));
     }
 
-    @ExceptionHandler({UsernameUniqueViolationException.class, NumberIdentificationUniqueException.class})
+    @ExceptionHandler({UsernameUniqueViolationException.class, NumberIdentificationUniqueException.class, CodUniqueViolationException.class})
     public ResponseEntity usernameUniqueViolationException(RuntimeException ex, HttpServletRequest request) {
 
         log.error("Api Error - ", ex);
