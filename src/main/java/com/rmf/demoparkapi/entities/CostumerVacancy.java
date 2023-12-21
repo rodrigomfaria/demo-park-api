@@ -47,7 +47,7 @@ public class CostumerVacancy {
     private LocalDateTime dhEntry;
 
     @Column(name = "dh_exit")
-    private LocalDateTime dataSaida;
+    private LocalDateTime dhExit;
 
     @Column(name = "total", columnDefinition = "decimal(7,2)")
     private BigDecimal total;
