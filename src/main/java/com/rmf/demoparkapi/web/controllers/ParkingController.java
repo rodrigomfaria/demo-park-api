@@ -1,4 +1,4 @@
-package com.rmf.demoparkapi.repositories;
+package com.rmf.demoparkapi.web.controllers;
 
 import com.rmf.demoparkapi.entities.CostumerVacancy;
 import com.rmf.demoparkapi.jwt.JwtUserDetails;
