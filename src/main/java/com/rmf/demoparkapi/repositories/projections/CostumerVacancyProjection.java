@@ -17,9 +17,9 @@ public interface CostumerVacancyProjection {
 
     String getColor();
 
-    String getIdentificationNumber();
+    String getCostumerIdentificationNumber();
 
-    String getReceipt();
+    String getReceiptNumber();
 
     @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     LocalDateTime getDhEntry();
@@ -27,7 +27,7 @@ public interface CostumerVacancyProjection {
     @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     LocalDateTime getDhExit();
 
-    String getVacancyCod();
+    String getVacancyCode();
 
     BigDecimal getTotal();
 

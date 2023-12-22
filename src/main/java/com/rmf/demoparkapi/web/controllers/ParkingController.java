@@ -155,7 +155,7 @@ public class ParkingController {
                             content = @Content(mediaType = " application/json;charset=UTF-8",
                                     schema = @Schema(implementation = ErrorMessage.class)))
             })
-    @GetMapping("/idenditifcatio-number/{identificationNumber}")
+    @GetMapping("/identification-number/{identificationNumber}")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<PageableDto> getAllParkingsByIdentificationNumber(@PathVariable String identificationNumber, @Parameter(hidden = true)
     @PageableDefault(size = 5, sort = "dhEntry",
