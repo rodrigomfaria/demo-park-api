@@ -1,0 +1,1 @@
+insert into users(role, username, password) values ('ROLE_ADMIN', 'admin@demoparkapi.com', '$2a$10$ky6RykKsXJdmVOvRDqfCzO15XmUyRlER0Qv2rmLStOdUJfMHndCpy');
