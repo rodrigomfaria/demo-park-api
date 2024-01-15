@@ -211,15 +211,15 @@ public class ParkingController {
     }
 
 
-    @Operation(summary = "Relatório em PDF com os estacionamentos do cliente",
-            description = "Recurso para gerar um relatório com os estacionamentos do cliente. " +
-                    "Requisição exige uso de um bearer token.",
+    @Operation(summary = "PDF report with customer parking lots",
+            description = "Feature to generate a report with the customer's parking lots. " +
+                    "Request requires use of a bearer token.",
             security = @SecurityRequirement(name = "security"),
             responses = {
-                    @ApiResponse(responseCode = "200", description = "Relatório gerado com sucesso",
+                    @ApiResponse(responseCode = "200", description = "Report generated successfully",
                             content = @Content(mediaType = "application/pdf",
                                     schema = @Schema(implementation = ParkingResponseDto.class))),
-                    @ApiResponse(responseCode = "403", description = "Recurso não permito ao perfil de ADMIN",
+                    @ApiResponse(responseCode = "403", description = "I don't allow the ADMIN profile feature",
                             content = @Content(mediaType = " application/json;charset=UTF-8",
                                     schema = @Schema(implementation = ErrorMessage.class)))
             })
