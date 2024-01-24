@@ -13,10 +13,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class VacancyCreateDto {
-    @NotBlank
+    @NotBlank(message = "{NotBlank.vacancyCreateDto.code}")
     @Size(min = 4, max = 4)
     private String code;
-    @NotBlank
-    @Pattern(regexp = "FREE|BUZY")
+    @NotBlank(message = "{NotBlank.vacancyCreateDto.status}")
+    @Pattern(regexp = "FREE|BUZY", message = "{Pattern.vacancyCreateDto.status}")
     private String status;
 }
