@@ -23,7 +23,7 @@ public class DbService {
     public void instantiateTestDatabase() throws ParseException {
 
         User user = new User();
-        user.setUsername("admin@demoparkapi.com");
+        user.setUsername("demopark.admin@gmail.com");
         user.setPassword(passwordEncoder.encode("123456"));
         user.setRole(User.Role.ROLE_ADMIN);
         userRepository.save(user);
